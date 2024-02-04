@@ -1,0 +1,459 @@
+@font-face {
+    font-family: 'Comic Sans MS';
+    src: url("comic-sans-ms/COMIC.TTF");
+}
+
+@font-face {
+    font-family: 'Comic Sans MS';
+    src: url("comic-sans-ms/design.graffiti.comicsansmsgras.ttf");
+    font-weight: bold;
+}
+
+body {
+    margin: 0;
+    font-family: 'Comic Sans MS';
+}
+
+#bgVid {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -100;
+}
+
+#bgVidBlend {
+    position: fixed;
+    opacity: 0.7;
+    top: 0;
+    left: 0;
+    min-height: 100%;
+    min-width: 100%;
+    width: auto;
+    height: auto;
+    z-index: -101;
+}
+
+#container {
+    width: 100%;
+    height: 600px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom: 0;
+    align-content: center;
+}
+
+nav {
+    background-color: black;
+	opacity: 0;
+	position: fixed;
+	top: 0;
+    left: 0;
+	padding: 0 0 0 0;
+	width: 100%;
+	transition: top 0.3s, opacity 1s ;
+    height: 50px;
+    z-index: 10000000;
+}
+
+nav:hover {
+    opacity: 0.7;
+}
+
+nav ul {
+	list-style:none;
+    text-decoration: none;
+    margin-top:0; text-align: center;
+    font-weight: bold;
+}
+
+nav ul li a {
+	display: inline-block;
+	color: lightblue;
+	font-size: 2.5vw;
+	padding-bottom: 10px;
+	text-decoration: none;
+	width: 100%;
+    margin: 0px 50px;
+	position: relative;
+}
+
+nav ul li a:visited {
+    color: lightblue;
+}
+
+nav ul li a:hover {
+	background-color: #FFCCFF;
+	color: yellow;
+    text-shadow: 1px 1px 2px deeppink;
+	font-weight: bold;
+}
+
+nav ul li a:active {
+    color: lightblue;
+    text-shadow: 1px 1px 2px deeppink;
+}
+
+nav > ul > li {
+    float: left;
+}
+
+
+#homepage {
+    position: fixed;
+    border: 6px solid black;
+	border-radius: 10px;
+	background-color: lightblue;
+    width: 55%;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 0px;
+    padding-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3%;
+    margin-bottom: auto;
+	align-items: center;
+    text-align: center;
+    justify-content: center;
+    vertical-align: middle;
+	box-shadow: 0px 0px 20px black;
+}
+
+.center {
+    width: 80%;
+    text-align: center;
+	align-content: center;
+	align-items: center;
+	left: 50%;
+	top: 50%;
+}
+
+.button:link {
+	width: 100%;
+	background-color: transparent;
+	text-align: center;
+    color: yellow;
+	text-decoration: none;
+}
+
+.button:hover {
+	background-color: lightgoldenrodyellow;
+    color: pink;
+	border-radius: 8px;
+}
+
+a.button {
+	width: 100%;
+	padding-left: 38%;
+	padding-right: 38%;
+	color: yellow;
+	font-weight: bold;
+	font-size: 250%;
+	text-shadow: 1px 1px 2px deeppink;
+}
+
+a.button:link {
+    color: yellow;
+	text-decoration: none;
+}
+
+a.button:hover {
+	color: pink;
+	text-decoration: none;
+}
+
+a.button:visited {
+    text-decoration: none;
+}
+
+a.button:active {
+    color:lightblue;
+    text-decoration: none;
+    text-shadow: 1px 1px 2px black;
+    
+}
+
+a {
+    font-size: 3vw;
+    text-decoration: none;
+}
+
+.audioPlay {
+    position: absolute;
+    border-radius: 5px;
+    float: left;
+    padding: 11px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 72%;
+    height: 84px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 30px #333333;
+    z-index: 100;
+}
+
+#change_vol {
+    position: relative;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 50%;
+    height: 10px;
+    background: lightgoldenrodyellow;
+    outline: none;
+    opacity: 0.8;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    border-radius: 5px;
+    margin-top: 27px;
+}
+
+#change_vol:hover {
+    opacity: 1;
+}
+
+#change_vol::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 54px;
+    width: 34px;
+    border: 0;
+    background: url('vol_slider.png');
+    cursor: pointer;
+}
+
+#change_vol::-moz-range-thumb {
+    height: 54px;
+    width: 34px;
+    border: 0;
+    background: url('vol_slider.png');
+    cursor: pointer;
+}
+
+#play_button {
+    position: relative;
+    float: left;
+    height: 67px;
+    margin-left: 2px;
+    margin-right: 5px;
+    margin-top: 4px;
+    bottom: 11%;
+    border-radius: 30px;
+    box-shadow: 0px 0px 10px black;
+    text-decoration: none;
+    border: 0px;
+    outline: none;
+    border-width: 0px;
+    outline-width: 0px;
+    border-bottom: none;
+    background-color: transparent;
+}
+
+#play_button:hover {
+    box-shadow: 0px 0px 0px black;
+}
+
+#play_button:active {
+    filter: invert(30%);
+}
+
+.vol_container {
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 0;
+
+}
+#vol_img {
+    position: relative;
+    bottom: 4px;
+}
+
+#progressbar {
+    position: relative;
+    float: left;
+    width: 45%;
+    height: 99%;
+    margin-left: 10px;
+    margin-right: 0;
+}
+
+#progbar {
+    position: relative;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 95%;
+    height: 95%;
+    background: lightgoldenrodyellow;
+    outline: none;
+    opacity: 0.9;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    border-radius: 5px;
+    margin-top: 2px;
+}
+
+#progbar:hover {
+    opacity: 1;
+}
+
+#progbar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 83px;
+    width: 51px;
+    border: 0;
+    background: url('prog_slider.png');
+    cursor: pointer;
+}
+
+#current-time {
+    position: relative;
+    float: left;
+    margin: 0;
+    margin-top: 20px;
+    padding: 0;
+    width: 5%;
+    cursor: default;
+}
+
+#duration {
+    position: relative;
+    float: left;
+    margin: 0;
+    margin-top: 20px;
+    padding: 0;
+    width: 4%;
+    cursor: default;
+}
+
+.ui-slider-handle {
+    border-radius: 50%;
+    top: -5px;
+    width: 11px;
+    height: 11px;
+    margin-left: -5px;
+}
+
+.logo {
+    color: lightgoldenrodyellow;
+    text-decoration-color: yellow;
+    text-shadow: 2px 2px 3px deeppink;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 15px;
+    padding-bottom: 0px;
+    width: 75%;
+    transition: width 0.5s;
+}
+
+.logo:hover {
+    width: 76%;
+}
+
+#iconsContainer {
+    margin-top: 30px;
+}
+
+.fab {
+    padding: 16px;
+    font-size: 50px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    vertical-align: bottom;
+    text-decoration: none;
+    color: black;
+    margin: 0px 2px;
+    border-radius: 50%;
+    opacity: 0.7;
+    transition: opacity 0.3s, background 0.5s, color 0.3s;
+}
+
+.fab:hover {
+    opacity: 1;
+    background: #ffccff;
+    color: yellow;
+}
+
+hr {
+    height: 3px;
+    background: black;
+}
+
+#center-con {
+    display: flex;
+    position: fixed;
+    right: 100px;
+    top: 47vh;
+    height: 100vh;
+    
+}
+
+
+
+.round {
+    position: absolute;
+    border: 2px solid #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    box-shadow: 0px 0px 10px #333333;
+}
+
+#cta{
+    width:100%; cursor: pointer; position: absolute;
+}
+
+#cta .arrow{left: 30%;}
+
+.arrow {
+    position: absolute;
+    bottom: 0;
+    margin-left: 0px;
+    width: 12px;
+    height: 12px;
+    background-size: contain;
+    top:15px;
+}
+.segunda{margin-left: 8px;}
+.next {
+	background-image: url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+PHN0eWxlPi5zdDB7ZmlsbDojZmZmfTwvc3R5bGU+PHBhdGggY2xhc3M9InN0MCIgZD0iTTMxOS4xIDIxN2MyMC4yIDIwLjIgMTkuOSA1My4yLS42IDczLjdzLTUzLjUgMjAuOC03My43LjZsLTE5MC0xOTBjLTIwLjEtMjAuMi0xOS44LTUzLjIuNy03My43UzEwOSA2LjggMTI5LjEgMjdsMTkwIDE5MHoiLz48cGF0aCBjbGFzcz0ic3QwIiBkPSJNMzE5LjEgMjkwLjVjMjAuMi0yMC4yIDE5LjktNTMuMi0uNi03My43cy01My41LTIwLjgtNzMuNy0uNmwtMTkwIDE5MGMtMjAuMiAyMC4yLTE5LjkgNTMuMi42IDczLjdzNTMuNSAyMC44IDczLjcuNmwxOTAtMTkweiIvPjwvc3ZnPg==);
+}
+
+@keyframes bounceAlpha {
+  0% {opacity: 1; transform: translateX(0px) scale(1);}
+  25%{opacity: 0; transform:translateX(10px) scale(0.9);}
+  26%{opacity: 0; transform:translateX(-10px) scale(0.9);}
+  55% {opacity: 1; transform: translateX(0px) scale(1);}
+}
+
+.bounceAlpha {
+    animation-name: bounceAlpha;
+    animation-duration:1.4s;
+    animation-iteration-count:infinite;
+    animation-timing-function:linear;
+}
+
+.arrow.primera.bounceAlpha {
+    animation-name: bounceAlpha;
+    animation-duration:1.4s;
+    animation-delay:0.2s;
+    animation-iteration-count:infinite;
+    animation-timing-function:linear;
+}
+
+.round:hover .arrow{
+    animation-name: bounceAlpha;
+    animation-duration:1.4s;
+    animation-iteration-count:infinite;
+    animation-timing-function:linear;
+}
+.round:hover .arrow.primera{
+    animation-name: bounceAlpha;
+    animation-duration:1.4s;
+    animation-delay:0.2s;
+    animation-iteration-count:infinite;
+    animation-timing-function:linear;
+}
